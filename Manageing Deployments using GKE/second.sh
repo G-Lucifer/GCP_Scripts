@@ -1,0 +1,31 @@
+cat deployments/auth.yaml
+kubectl create -f deployments/auth.yaml
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get deployments
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get replicasets
+kubectl get pods
+kubectl get pods
+kubectl get pods
+kubectl get pods
+kubectl get pods
+kubectl get pods
+kubectl get pods
+kubectl get pods

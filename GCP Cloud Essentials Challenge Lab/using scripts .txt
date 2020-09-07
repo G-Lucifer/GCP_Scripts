@@ -1,0 +1,7 @@
+chmod +x try.sh 
+chmod +x try2.sh
+./try.sh
+gcloud compute target-pools create nginx-pool
+n
+18
+chmod +x try2.sh

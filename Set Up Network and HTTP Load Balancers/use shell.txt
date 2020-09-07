@@ -1,0 +1,6 @@
+chmod +x first.sh 
+chmod +x second.sh
+chmod +x third.sh
+./first.sh 
+./second.sh
+./third.sh

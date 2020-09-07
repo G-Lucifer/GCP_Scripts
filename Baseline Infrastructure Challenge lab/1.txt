@@ -1,0 +1,8 @@
+gsutil mb gs://fcvjhbgkguvyguvyyu/
+
+gcloud pubsub topics create myTopic
+gcloud  pubsub subscriptions create --topic myTopic mySubscription
+gcloud pubsub topics publish myTopic --message "Publisher's name is Tushar Mudi"
+gcloud pubsub subscriptions pull mySubscription --auto-ack
+
+

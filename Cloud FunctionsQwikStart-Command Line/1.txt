@@ -1,0 +1,29 @@
+mkdir gcf_hello_world
+cd gcf_hello_world
+
+nano index.js
+/**
+ * Cloud Function.
+ *
+ * @param {object} event The Cloud Functions event.
+ * @param {function} callback The callback function.
+ */
+exports.helloWorld = function helloWorld (event, callback) {
+  console.log(`My Cloud Function: ${JSON.stringify(event.data.message)}`);
+  callback();
+};
+
+
+gsutil mb -p qwiklabs-gcp-03-79f968012e93 gs://qwiklabs-gcp-03-79f968012e93bucket
+gcloud functions deploy helloWorld \
+  --stage-bucket [BUCKET_NAME] \
+  --trigger-topic hello_world \
+  --runtime nodejs6
+gcloud functions describe helloWorld
+gcloud functions describe helloWorld
+gcloud functions describe helloWorld
+gcloud functions describe helloWorld
+gcloud functions describe helloWorld
+gcloud functions describe helloWorld
+gcloud functions call helloWorld --data '{"message":"Hello World!"}'
+gcloud functions logs read helloWorld
