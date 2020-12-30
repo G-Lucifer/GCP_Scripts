@@ -1,0 +1,14 @@
+92307692
+98360655
+https://console.cloud.google.com/ai/platform/notebooks?project=
+
+git clone https://github.com/GoogleCloudPlatform/training-data-analyst
+
+
+
+
+
+gcloud beta compute --project=qwiklabs-gcp-00-df8deb47e41c instances create tensorflow-2-1-20201ghfvghbhuh --zone=us-central1-a --machine-type=n1-standard-4 --subnet=default --network-tier=PREMIUM --metadata="proxy-mode=service_account,framework=TensorFlow:2.1,startup-script=git clone https://github.com/GoogleCloudPlatform/training-data-analyst" --maintenance-policy=MIGRATE --scopes=https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email --tags=deeplearning-vm --image=tf2-2-1-cu110-notebooks-v20201112-debian-10 --image-project=deeplearning-platform-release --boot-disk-size=100GB --boot-disk-type=pd-standard --boot-disk-device-name=tensorflow-2-1-20201ghfvghbhuh --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
+
+gcloud beta compute --project=qwiklabs-gcp-00-df8deb47e41c instances create instance-1 --zone=us-central1-a --machine-type=e2-medium --subnet=default --network-tier=PREMIUM --metadata=startup-script=jupyter\ notebook$'\n'git\ clone\ https://github.com/GoogleCloudPlatform/training-data-analyst --maintenance-policy=MIGRATE --service-account=874234871766-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --image=debian-10-buster-v20201216 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=instance-1 --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
+

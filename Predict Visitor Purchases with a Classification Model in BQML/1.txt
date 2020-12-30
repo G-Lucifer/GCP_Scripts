@@ -1,0 +1,5 @@
+https://console.cloud.google.com/bigquery?project=qwiklabs-gcp-00-c795866e1409
+
+bring into scope using link
+
+###create a dataset using bq
